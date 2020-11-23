@@ -16,7 +16,26 @@ matrix:
       dist: xenial
     - python: 3.7
       dist: xenial
-
+    - python: 2.7
+      arch : ppc64le
+      dist: trusty
+    - python: 3.4
+      arch : ppc64le
+      dist: xenial
+    - python: 3.5
+      arch : ppc64le
+      dist: xenial
+    - python: 3.6
+      arch : ppc64le
+      dist: xenial
+    - python: 3.7
+      arch : ppc64le
+      dist: xenial
+jobs:
+  exclude :
+    python:
+       - 3.2
+       - 3.3
 install:
     - pip install -r dev-requirements.txt
     - python setup.py install
